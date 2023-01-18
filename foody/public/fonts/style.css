@@ -1,0 +1,183 @@
+/**
+ * Raykuns, Nettizen, Fineberg, Justlyne, Handscript, Malina, Sunder out, Hamburg, Darkline, Blackball,Birdrockers, Kadisoka, Masha, Restaurants Script
+ *
+ */
+
+.font-style {
+    background: rgba(0, 0, 0, 0.1);
+    text-shadow: #646769 1px 1px;
+    font-size: 100px;
+    /* transform: scaleY(1.5); */
+    transform: rotate(-5deg);
+}
+
+.font-phone {
+    font-size: 120px;
+}
+
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-width: 400px) {
+    .font-style {
+        background: rgba(0, 0, 0, 0.1);
+        text-shadow: #646769 1px 1px;
+        font-size: 60px;
+        /* transform: scaleY(1.5); */
+        transform: rotate(-5deg);
+    }
+    .font-phone {
+        font-size: 80px;
+    }
+}
+
+
+/* Raykuns */
+
+@font-face {
+    font-family: 'Raykuns';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Raykuns/Raykuns.ttf") format('truetype');
+    src: url("Raykuns/Raykuns.otf") format("opentype");
+}
+
+
+/* Nettizen */
+
+@font-face {
+    font-family: 'Nettizen';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Nettizen/Nettizen.ttf");
+    src: url("Nettizen/Nettizen.otf") format("opentype");
+}
+
+
+/* Fineberg */
+
+@font-face {
+    font-family: 'Fineberg';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Fineberg/Fineberg.ttf");
+    src: url("Fineberg/Fineberg.otf") format("opentype");
+}
+
+
+/* Justlyne */
+
+@font-face {
+    font-family: 'Justlyne';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Justlyne/Justlyne.ttf");
+    src: url("Justlyne/Justlyne.otf") format("opentype");
+}
+
+
+/* Handscript */
+
+@font-face {
+    font-family: 'Handscript';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Handscript/Handscript.ttf");
+    src: url("Handscript/Handscript.otf") format("opentype");
+}
+
+
+/* Malina */
+
+@font-face {
+    font-family: 'Malina';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Malina/Malina.ttf");
+    src: url("Malina/Malina.otf") format("opentype");
+}
+
+
+/* Sunder outh */
+
+@font-face {
+    font-family: 'Sunder outh';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Sunder outh/Sunder outh.ttf");
+    src: url("Sunder outh/Sunder outh.otf") format("opentype");
+}
+
+
+/* Hamburg */
+
+@font-face {
+    font-family: 'Hamburg';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 180px;
+    src: url("Hamburg/Hamburg.ttf");
+    src: url("Hamburg/Hamburg.otf") format("opentype");
+}
+
+
+/* Darkline */
+
+@font-face {
+    font-family: 'Darkline';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Darkline/Darkline.otf") format("opentype");
+}
+
+
+/* Blackball */
+
+@font-face {
+    font-family: 'Blackball';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Blackball/Blackball.otf") format("opentype");
+}
+
+
+/* Birdrockers */
+
+@font-face {
+    font-family: 'Birdrockers';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Birdrockers/Birdrockers.ttf");
+}
+
+
+/* Kadisoka */
+
+@font-face {
+    font-family: 'Kadisoka';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Kadisoka/Kadisoka.ttf");
+}
+
+
+/* Restaurants Script */
+
+@font-face {
+    font-family: 'Restaurants Script';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    src: url("Restaurants Script/Restaurants Script.ttf");
+}

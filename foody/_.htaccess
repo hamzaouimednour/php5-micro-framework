@@ -1,0 +1,25 @@
+Options -Indexes
+
+# Disable server signature
+ServerSignature Off
+
+# for main domains: force ssl and www
+RewriteCond %{HTTP_HOST} !\.local$ [NC]
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^foody\.tn$ [NC]
+RewriteRule ^.*$ https://www.foody.tn%{REQUEST_URI} [R,L]
+
+<IfModule mod_rewrite.c>
+ 
+    RewriteEngine on
+
+    # All URL process by index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+    # Return 404 if original request is .php
+    RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+    RewriteRule .* - [L,R=404]
+
+</IfModule>

@@ -1,0 +1,71 @@
+/*==================================================
+ Preloader CSS
+==================================================*/
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 9999999;
+}
+
+.loder-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.section-parallax img {
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    right: 0;
+    top: 0;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top.nav-center-aligned {
+    display: none;
+}
+
+.ripple::after {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+/*==================================================
+ Spinner CSS
+==================================================*/
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #f7f7f7;
+    border-top-color: #4e4e4e;
+    animation: spinner .6s linear infinite;
+}

@@ -1,0 +1,32 @@
+create_session > check_user_auth > views
+
+Session::get('user_id') > gives $_SESSION['user_id']
+
+fd_address
+fd_administrator
+fd_city
+fd_city_zone
+fd_customer
+fd_customer_address
+fd_customer_dishes_bookmark
+fd_customer_feedback
+fd_customer_orders_nbr
+fd_customer_promotion
+fd_delivery
+fd_discount_code
+fd_discount_price
+fd_dishes
+fd_dishes_extras
+fd_dishes_menu
+fd_modules
+fd_options
+fd_orders
+fd_order_dishes
+fd_promotion_quantity
+fd_restaurant
+fd_restaurant_extras
+fd_restaurant_feedback
+fd_restaurant_work
+fd_users_authority
+fd_users_logs
+fd_vehicle

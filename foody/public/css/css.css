@@ -1,0 +1,336 @@
+/* Slider */
+
+.osahan-slider {
+    position: relative;
+}
+
+.osahan-slider .carousel-item {
+    height: 450px;
+    min-height: 450px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.slider-one {
+    background-image: url('../img/slider/1.jpg') !important;
+}
+
+.slider-two {
+    background-image: url('../img/slider/2.jpg') !important;
+}
+
+.slider-three {
+    background-image: url('../img/slider/3.jpg') !important;
+}
+
+.slider-four {
+    background-image: url('../img/slider/4.jpg') !important;
+}
+
+
+/* Slider Form */
+
+.slider-form {
+    left: 15%;
+    position: absolute;
+    right: 15%;
+    top: 17%;
+}
+
+.banner-list h1 {
+    font-size: 36px;
+}
+
+.banner-list h6 {
+    color: #666;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.slider-form .nav-tabs {
+    border: medium none;
+    margin: auto auto 12px;
+    text-align: center;
+}
+
+.slider-form .nav-tabs a {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50px;
+    color: #263238;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #710000;
+    padding: 6px 23px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.slider-form .nav-tabs a.active {
+    background: #710000 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.slider-form .nav-tabs a.active:after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #710000;
+    bottom: -6px;
+    content: "";
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 14px;
+}
+
+.slider-form .tab-content {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.slider-form .input-group-addon {
+    line-height: 58px;
+    position: absolute;
+    text-align: center;
+    width: 41px;
+    z-index: 9;
+}
+
+.slider-form .input-group-addon .mdi {
+    font-size: 18px;
+}
+
+.slider-form .select2-selection {
+    border: medium none !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    padding: 15px 15px 15px 33px;
+}
+
+.slider-form .select2 {
+    width: 100% !important;
+    border-right: 1px solid rgba(204, 204, 204, 0.3);
+}
+
+.slider-form .form-control {
+    border: medium none !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    padding: 19px 15px 19px 43px;
+    border-right: 1px solid rgba(204, 204, 204, 0.3) !important;
+}
+
+.slider-form .select2-selection__arrow {
+    margin: 15px 12px 0;
+}
+
+.slider-form .btn {
+    font-size: 13px;
+    padding: 18px 8px;
+}
+
+.select2-dropdown {
+    border: medium none;
+    border-radius: 0;
+}
+
+#featured-properties .carousel-indicators .active {
+    background-color: #818080;
+}
+
+#featured-properties .carousel-indicators li {
+    background-color: rgba(166, 166, 166, 0.5);
+}
+
+#featured-properties .carousel-indicators {
+    margin: 0;
+}
+
+.carousel-indicators {
+    bottom: auto;
+    left: auto;
+    margin: 0;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+
+.carousel-indicators {
+    bottom: auto;
+    left: auto;
+    margin: 0;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+
+.slider-form .nav-tabs a.active {
+    background: #710000 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.slider-form .nav-tabs a.active:after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #710000;
+    bottom: -6px;
+    content: "";
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 14px;
+}
+
+#featured-properties .carousel-indicators .active {
+    background-color: #818080;
+}
+
+.slider-h-auto .carousel-item {
+    height: auto !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+.inner-page-form,
+.slider-form {
+    bottom: 1px !important;
+    left: 1px;
+    right: 1px;
+    top: auto !important;
+}
+
+.inner-page-form .container,
+.slider-form .container {
+    padding: 0;
+}
+
+.map-slider-form {
+    background: #ffffff none repeat scroll 0 0;
+    left: auto !important;
+    padding: 20px 0;
+    position: relative !important;
+    right: auto !important;
+}
+
+.slider-form.map-slider-form .select2 {
+    border: 1px solid rgba(204, 204, 204, 0.3);
+    width: 100%;
+}
+
+
+/* Slider Form */
+
+.slider-form {
+    left: 15%;
+    position: absolute;
+    right: 15%;
+    top: 17%;
+}
+
+.banner-list h1 {
+    font-size: 36px;
+}
+
+.banner-list h6 {
+    color: #666;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.slider-form .nav-tabs {
+    border: medium none;
+    margin: auto auto 12px;
+    text-align: center;
+}
+
+.slider-form .nav-tabs a {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50px;
+    color: #263238;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #710000;
+    padding: 6px 23px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.slider-form .nav-tabs a.active {
+    background: #710000 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.slider-form .nav-tabs a.active:after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #710000;
+    bottom: -6px;
+    content: "";
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 14px;
+}
+
+.slider-form .tab-content {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.slider-form .input-group-addon {
+    line-height: 58px;
+    position: absolute;
+    text-align: center;
+    width: 41px;
+    z-index: 9;
+}
+
+.slider-form .input-group-addon .mdi {
+    font-size: 18px;
+}
+
+.slider-form .select2-selection {
+    border: medium none !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    padding: 15px 15px 15px 33px;
+}
+
+.slider-form .select2 {
+    width: 100% !important;
+    border-right: 1px solid rgba(204, 204, 204, 0.3);
+}
+
+.slider-form .form-control {
+    border: medium none !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    padding: 19px 15px 19px 43px;
+    border-right: 1px solid rgba(204, 204, 204, 0.3) !important;
+}
+
+.slider-form .select2-selection__arrow {
+    margin: 15px 12px 0;
+}
+
+.slider-form .btn {
+    font-size: 13px;
+    padding: 18px 8px;
+}

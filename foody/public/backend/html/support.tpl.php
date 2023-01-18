@@ -1,0 +1,99 @@
+<div class="modal fade" id="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i style="font-size: 13px;" class="ion-md-chatbubbles"></i> Avis du Client</span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="ion ion-ios-close-circle-outline"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Nom d'utilisateur :</label>
+                        <input class="form-control text-capitalize" id="user-name" style="pointer-events: none;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Autorité d'utilisateur :</label>
+                        <input class="form-control text-capitalize" id="user-auth" style="pointer-events: none;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="" class="font-weight-bold">Sujet :</label>
+                        <input class="form-control text-capitalize" id="user-request" style="pointer-events: none;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="customer-comment" class="font-weight-bold">Description :</label>
+                        <textarea class="form-control" id="user-desc" style="pointer-events: none;margin-top: 0px; margin-bottom: 0px; height: 170px;" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-inverse">
+    <!-- begin panel-heading -->
+    <div class="panel-heading">
+        <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+        </div>
+        <h4 class="panel-title">List des Demandes</h4>
+    </div>
+    <!-- end panel-heading -->
+    <!-- begin panel-body -->
+    <div class="panel-body">
+        <table id="data-table-default" class="table table-striped table-bordered" style="width:100%;">
+            <thead>
+                <tr class="text-center">
+                    <th class="text-nowrap" width="20%">Nom d'utilisateur</th>
+                    <th class="text-nowrap" width="1%">Autorité d'utilisateur</th>
+                    <th class="text-nowrap" width="20%">Date</th>
+                    <th class="text-nowrap">Sujet</th>
+                    <th width="1%" class="text-nowrap" data-orderable="false">Options</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <?php
+                $requests = (new UsersRequests)->getAll();
+                if ($requests) {
+                    foreach ($requests as $req) {
+                        if ($req->getUserAuth() == 2) {
+                            $user = (new Restaurant)->setUid($req->getUserId())->getUserByUid();
+                            $auth = '<i class="fas fa-shopping-bag"></i> Restaurant';
+                        }
+                        if ($req->getUserAuth() == 3) {
+                            $user = (new Delivery)->setUid($req->getUserId())->getUserByUid();
+                            $auth = '<i class="fas fa-motorcycle"></i> Livreur';
+                        }
+                        $dateRate = new DateTime($req->getDateTime());
+                        $sujets = array(
+                            "Account Deletion" => "Suppression du compte",
+                            "Help & Support" => "Aide & Support",
+                            "Technical Issue" => "Problème Technique",
+                            "Other" => "Autre"
+                        );
+                        ?>
+                        <tr id="<?= Handler::encryptInt($req->getId()) ?>" class="">
+                            <td class="text-inverse text-capitalize"><?= $user->getFullName() ?></td>
+                            <td class="text-inverse font-weight-bold text-uppercase"><?= $auth ?></td>
+                            <td><?= $dateRate->format('d/m/Y H:i:s'); ?></td>
+                            <td class="font-weight-bold text-dark"><?= $sujets[$req->getRequest()] ?></td>
+                            <td class="text-nowrap" width="1%">
+                                <button data-id="<?= Handler::encryptInt($req->getId()) ?>" class="btn btn-white btn-xs m-r-3 btn-view"><i class="fa fa-eye"></i></button>
+                            </td>
+                        </tr>
+                <?php
+                    }
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <!-- end panel-body -->
+</div>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Update</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <!-- <script type="text/javascript" src="ajaxAutoReloader.js"></script> -->
+</head>
+<table>
+<tr>id</tr>
+</table>>
+
+</body>
+<script>
+/*
+$(document).ready(function(){
+    $.ajaxSetup({cache: false});
+    var $container = $("#liveData");
+    $container.load("../../redirect.js");
+    setInterval(function(){
+        $container.load('../../redirect.js');
+    }, 5000);
+});
+*/
+</script>
+</html>
+
+<!-- 
+
+if (window.history.replaceState) {
+   //prevents browser from storing history with each change:
+   window.history.replaceState(statedata, title, url);
+}
+<script>
+$.post( "add.php", { name: "John", time: "2pm" })
+  .done(function( data ) {
+    alert( "Data Loaded: " + data );
+  });
+  .fail(function() {
+    alert( "error" );
+  })
+</script>
+<script>
+$(document).ready(function(){
+    setInterval(function(){
+        $.ajax({
+            type: 'POST',
+            url: 'ajaxfile.php'
+        }).success(function(response){
+            var response = $.parseJSON(response);
+            var username = response.username; //here we put hypothetical db column "username" in a variable
+            alert(username); //here we alert the "username" variable in order to verify the script. All other db columns can be called as: response.db_column_name
+        });
+    }, 10000); //interval time: 10000 milliseconds (10 seconds)
+});
+</script>
+
+<?php
+//protect the file from un-authorized access
+define('AJAX_REQUEST', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
+if(!AJAX_REQUEST) {die();}
+
+require("db_connect.php"); //a typical db connection function
+
+$results = array(); //define the results variable
+
+$query = mysql_query("SELECT * FROM users WHERE new_column = '1' ORDER BY id DESC LIMIT 1"); //here we query the db to fetch only the newest record -the one where column "seen" is "1"
+
+while($res = mysql_fetch_assoc($query)){
+    $current_id = $res["id"];
+    mysql_query("UPDATE users SET new_column = '0' WHERE id = '$current_id' "); //update the record so it will appear as "seen" and will not be fetched again
+    $results[] = $res;
+}
+
+echo json_encode($results);
+
+?>
+-->

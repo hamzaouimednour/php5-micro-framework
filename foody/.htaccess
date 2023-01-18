@@ -1,0 +1,43 @@
+Deny from all 
+
+/
+Options -Indexes
+
+php_flag log_errors off
+
+DirectorySlash Off
+#ErrorDocument 404 "app/Modules/Index/404.php"
+#ErrorDocument 403 "app/Modules/Index/404.php"
+
+# Disable server signature
+ServerSignature Off
+
+php_value session.gc_maxlifetime "18000"
+
+# for main domains: force ssl and www
+RewriteCond %{HTTP_HOST} !\.local$ [NC]
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^foody\.tn$ [NC]
+RewriteRule ^.*$ https://www.foody.tn%{REQUEST_URI} [R,L]
+
+# Extra Security Headers
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+	Header always append X-Frame-Options SAMEORIGIN
+	Header set X-Content-Type-Options nosniff
+</IfModule>
+
+<IfModule mod_rewrite.c>
+ 
+    RewriteEngine on
+
+    # All URLs process by index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+    # Return 404 if original request is .php
+    RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+    RewriteRule .* - [L,R=404]
+
+</IfModule>
